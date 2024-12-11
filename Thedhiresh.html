@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Dhiresh</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="icon" type="image/x-icon" href="https://www.emmegi.co.uk/wp-content/uploads/2019/01/User-Icon.jpg" >
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #003366; /* Primary Color */
+    padding: 20px 0;
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6600; /* Highlight Color */
+}
+
+.cta {
+    background-color: #33CC99; /* Accent Color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+    background-color: #FF6600; /* Highlight Color */
+}
+#home {
+    display: flex;
+    justify-content: space-between; /* Spreads the content evenly */
+    align-items: center;
+    width: 100%; /* Full width to utilize screen space */
+    max-width: 1200px; /* Constrain the width for larger screens */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 50px 20px; /* Add padding for better spacing */
+}
+
+.content {
+    flex: 1; /* Ensures content and image take equal space */
+    padding-right: 20px; /* Adds space between content and image */
+}
+.social-icons {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.social-icon {
+    margin: 0 10px;
+    color: #333; /* Default icon color */
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #003366; /* Icon color on hover */
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /*overflow: hidden; */ /* Ensures the image doesn't overflow during scale */
+}
+
+.home-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effect */
+.image-container:hover .home-photo {
+    transform: translateY(-8px); /* Moves the image up by 5px */
+
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .content {
+        padding-right: 0; /* Remove padding on smaller screens */
+    }
+
+    .image-container {
+        min-height: 450px;
+        margin-top: 20px;
+    }
+}
+
+h1 {
+    font-size: 48px;
+    color: #003366; /* Primary Color */
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    color: #333333; /* Text Color */
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #33CC99; /* Accent Color */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #FF6600; /* Highlight Color */
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container {
+        margin-top: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+}
+#provide {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#provide h1 {
+    font-size: 36px;
+    color: #003366; /* Primary Color */
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 50%;
+    margin: 0 auto 40px;
+    border: none;
+    height: 2px;
+    background-color: #33CC99; /* Accent Color */
+}
+
+.provide {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap; /* Responsive design for six boxes */
+    gap: 20px;
+}
+
+.provide-box {
+    width: 30%; /* Adjusted for three boxes per row */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.provide-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.provide-box h3 {
+    font-size: 24px;
+    color: #003366; /* Primary Color */
+    margin-bottom: 10px;
+}
+
+.provide-box p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Hover Effects */
+.provide-box:hover {
+    transform: translateY(-10px); /* Moves the box upwards */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Elevates box shadow */
+}
+
+.provide-box:hover img {
+    transform: scale(1.05); /* Slightly enlarges the image */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .provide-box {
+        width: 45%; /* Adjust for two boxes per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .provide {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .provide-box {
+        width: 80%; /* Full width for mobile */
+        margin-bottom: 20px;
+    }
+}
+
+#project {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+#project h1 {
+    font-size: 36px;
+    color: #003366; /* Primary Color */
+    margin-bottom: 20px;
+}
+
+hr {
+    width: 50%;
+    margin: 0 auto 40px;
+    border: none;
+    height: 2px;
+    background-color: #33CC99; /* Accent Color */
+}
+
+.project {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    flex-wrap: wrap; /* Responsive design for six boxes */
+    gap: 20px;
+}
+
+.project-box {
+    width: 30%; /* Adjusted for three boxes per row */
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.project-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+/* Adjust Header for Mobile */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .cta {
+        margin-top: 15px;
+        padding: 8px 16px;
+    }
+}
+
+/* Responsive Image Adjustments */
+@media (max-width: 768px) {
+    .image-container {
+        min-height: auto;
+        margin-top: 20px;
+    }
+
+    .home-photo {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+}
+
+/* Improve Footer Responsiveness */
+@media (max-width: 768px) {
+    footer .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .footer-left, 
+    footer .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-right .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Form Section Adjustments */
+@media (max-width: 768px) {
+    #contact-form .form-container {
+        flex-direction: column;
+    }
+
+    .form-image, form {
+        width: 100%;
+    }
+
+    .form-image img {
+        width: 70%;
+    }
+}
+
+.project-box h3 {
+    font-size: 24px;
+    color: #003366; /* Primary Color */
+    margin-bottom: 10px;
+}
+
+.project-box p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Hover Effects */
+.project-box:hover {
+    transform: translateY(-10px); /* Moves the box upwards */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Elevates box shadow */
+}
+
+.project-box:hover img {
+    transform: scale(1.05); /* Slightly enlarges the image */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-box {
+        width: 45%; /* Adjust for two boxes per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .proect-box {
+        width: 80%; /* Full width for mobile */
+        margin-bottom: 20px;
+    }
+}
+#client {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+#client h1 {
+    font-size: 36px;
+    color: #003366; /* Primary Color */
+    margin-bottom: 20px;
+}
+
+#client hr {
+    width: 50%;
+    margin: 0 auto 40px;
+    border: none;
+    height: 2px;
+    background-color: #33CC99; /* Accent Color */
+}
+
+.client{
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client img {
+    width: 150px;
+    height: auto;
+    padding: 20px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.client img:hover {
+    transform: scale(1.1); 
+
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#Contact{
+    background-color: #f5f5f5;
+    justify-content: center;
+    align-items: center;
+}
+#Contact h1{
+text-align: center;
+}
+#Contact p{
+    text-align: center;
+    text-decoration: none;
+}
+#Contact p a{
+    text-decoration: none;
+    color: #003366;
+}
+
+#contact-form {
+    background-color: #f5f9fc; /* Light neutral background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.form-image {
+    width: 50%;
+    text-align: center;
+}
+
+.form-image img {
+    width: 80%;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+input:focus, textarea:focus {
+    border-color: #3399ff; /* Light blue focus */
+}
+
+.submit-button {
+    padding: 15px;
+    background: linear-gradient(to right, #6A5ACD, #48D1CC); /* Gradient button */
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: linear-gradient(to right, #48D1CC, #6A5ACD); /* Reversed gradient on hover */
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-image, form {
+        width: 100%;
+    }
+
+    .form-image img {
+        width: 60%;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-left, .footer-right {
+    width: 45%;
+}
+
+.footer-left p, .footer-right p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-left p strong {
+    font-weight: 600;
+}
+
+.footer-left i, .footer-right i {
+    margin-right: 10px;
+}
+
+.footer-right h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-right .social-icons a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-right .social-icons a:hover {
+    color: #3399ff;
+}
+
+a {
+    color: #3399ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #48D1CC;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-right .social-icons {
+        justify-content: center;
+    }
+}
+.footer-left p{
+    color: white;
+}
+.footer-left p a{
+    color: white;
+}
+.footer-left p a:hover{
+    color: #3399ff;
+}
+.footer-right p{
+    color: white;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#">The Dhiresh</a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#" class="cta">Get Started</a>
+        </div>
+    </header>
+    <section id="home">
+        <div class="content">
+            <p style="font-size: 24px; margin-left: 5px;margin-bottom: -7px;"> I'm</p>
+            <h1>Dhiresh Kumar</h1>
+            <p>WordPress | PHP | Web Development | Freelancer.............</p>
+
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/your-whatsapp-number" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#"><i class="fab fa-linkedin-in" target="_blank" class="social-icon"></i></a>
+
+                <a href="https://github.com/your-username" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <a href="#contact" class="cta-button">Contact</a>
+        </div>
+        <div class="image-container">
+            <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Intro Image" class="home-photo">
+        </div>
+    </section>
+    <section id="provide">
+        <h1 style="text-align: center;">Services</h1>
+        <hr>
+        <div class="provide">
+            <div class="provide-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Company Profile" class="provide-photo">
+                <h3>Company Profile</h3>
+                <p>
+                    We offer detailed and professional company profiles to help your business stand out. Our profiles are designed to showcase your services, values, and expertise.
+                </p>
+            </div>
+    
+            <div class="provide-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Web Development" class="provide-photo">
+                <h3>Web Development</h3>
+                <p>
+                    Our expert web development services focus on creating responsive and user-friendly websites. We ensure your online presence is impactful and SEO-friendly.
+                </p>
+            </div>
+    
+            <div class="provide-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Mobile App Development" class="provide-photo">
+                <h3>Mobile App Development</h3>
+                <p>
+                    We build robust and scalable mobile applications tailored to your business needs, ensuring a smooth and user-friendly experience on all devices.
+                </p>
+            </div>
+    
+            <div class="provide-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="UI/UX Design" class="provide-photo">
+                <h3>UI/UX Design</h3>
+                <p>
+                    We create intuitive and attractive user interfaces to ensure a seamless and engaging experience for your users across all devices.
+                </p>
+            </div>
+    
+            <div class="provide-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="SEO Optimization" class="provide-photo">
+                <h3>SEO Optimization</h3>
+                <p>
+                    Our SEO services are designed to improve your search engine rankings, increasing your website's visibility and driving more traffic to your business.
+                </p>
+            </div>
+    
+            <div class="provide-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Digital Marketing" class="provide-photo">
+                <h3>Digital Marketing</h3>
+                <p>
+                    We develop customized digital marketing strategies to grow your business online, reach your target audience, and achieve measurable results.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="project">
+        <h1 style="text-align: center;">Project</h1>
+        <hr>
+        <div class="project">
+            <div class="project-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Company Profile" class="provide-photo">
+                <h3>Company Profile</h3>
+                <p>
+                    We offer detailed and professional company profiles to help your business stand out. Our profiles are designed to showcase your services, values, and expertise.
+                </p>
+                <button class="cta-button">View Details</button>
+            </div>
+    
+            <div class="project-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Web Development" class="provide-photo">
+                <h3>Web Development</h3>
+                <p>
+                    Our expert web development services focus on creating responsive and user-friendly websites. We ensure your online presence is impactful and SEO-friendly.
+                </p>
+                <button class="cta-button">View Details</button>
+            </div>
+    
+            <div class="project-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Mobile App Development" class="provide-photo">
+                <h3>Mobile App Development</h3>
+                <p>
+                    We build robust and scalable mobile applications tailored to your business needs, ensuring a smooth and user-friendly experience on all devices.
+                </p>
+                <button class="cta-button">View Details</button>
+            </div>
+    
+            <div class="project-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="UI/UX Design" class="provide-photo">
+                <h3>UI/UX Design</h3>
+                <p>
+                    We create intuitive and attractive user interfaces to ensure a seamless and engaging experience for your users across all devices.
+                </p>
+                <button class="cta-button">View Details</button>
+            </div>
+    
+            <div class="project-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="SEO Optimization" class="provide-photo">
+                <h3>SEO Optimization</h3>
+                <p>
+                    Our SEO services are designed to improve your search engine rankings, increasing your website's visibility and driving more traffic to your business.
+                </p>
+                <button class="cta-button">View Details</button>
+            </div>
+    
+            <div class="project-box">
+                <img src="https://preview.uideck.com/items/fusion/assets/img/intro-mobile.png" alt="Digital Marketing" class="provide-photo">
+                <h3>Digital Marketing</h3>
+                <p>
+                    We develop customized digital marketing strategies to grow your business online, reach your target audience, and achieve measurable results.
+                </p>
+                <button class="cta-button">View Details</button>
+            </div>
+        </div>
+    </section>
+    <section id="client">
+        <h1>Our Clients</h1>
+        <hr>
+        <div class="client">
+            
+                <img src="path-to-logo-1.png" alt="KalaiyaMart">
+                <img src="path-to-logo-2.png" alt="Plus Desire">
+                <img src="path-to-logo-3.png" alt="Test">
+                <img src="path-to-logo-4.png" alt="Client 4">
+                <img src="path-to-logo-5.png" alt="Client 5">
+                       
+        </div>
+    </section>
+
+    <section id="Contact">
+        <h1>Have Some Question</h1>
+        <p><a href="mailto:kushwahadhiresh1@gmail.com"><i class="fa-solid fa-envelope"></i>  Kushwahadhiresh1@gmail.com</a> | <a href="tel:+9779826259899"><i class="fa-solid fa-phone"></i>  +977 982-625-9899</a> </p>
+        <section id="contact-form">
+            <div class="form-container">
+                <div class="form-image">
+                    <img src="photo/form.png" alt="Contact form">
+                </div>
+                <form action="#" method="POST">
+                    <input type="text" name="first_name" placeholder="First Name" required>
+                    <input type="text" name="last_name" placeholder="Last Name" required>
+                    <input type="number" name="Phone " placeholder="What's your Phone Number?" required>
+                    <input type="email" name="email" placeholder="What's your email?" required>
+                    <textarea name="questions" placeholder="Your questions..." required></textarea>
+                    <button type="submit" class="submit-button">SEND MESSAGE</button>
+                </form>
+            </div>
+        </section>
+     </section>
+     <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p><i class="fas fa-map-marker-alt"></i>Kalaiya -11 <br><strong>Bara, Nepal</strong></p>
+                <p><i class="fas fa-phone-alt"></i><a href="tel:+9779826259899"> +977 982 6259899</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:kushwahadhiresh1@gmail.com">kushwahadhiresh1@gmail.com</a></p>
+            </div>
+            <div class="footer-right">
+                <h3>About the me</h3>
+                <p>Dhiresh Kumar is a skilled website developer from Nepal, specializing in affordable WordPress websites with a focus on SEO and responsive design. With expertise in development, cybersecurity, he delivers versatile web solutions, ensuring client satisfaction through a personalized, client-first approach.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
